@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+:root {
+    --text-color: black;
+    --para-color: rgba(128, 0, 128, 0.628);
+    --nova: 'Nova Square', cursive;
+    --poppins: 'Poppins', sans-serif;
+    --x: 10px;
+    --y: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1556262298-e85892643712?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8MTY2NDk3OTA1NQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.card {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    height: auto;
+    width: 240px;
+    background: rgba(255, 255, 255, 1);
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    border-radius: 8px;
+    font-family: sans-serif; 
+    box-shadow: 
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    user-select: none;
+}
+.card2{
+    top: calc(var(--y) + 55px);
+    left: calc(var(--x) + 75px);
+}
+
+.card-header {
+    background-color: purple;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    font-family: var(--nova);
+    font-weight: 300;
+    cursor: grab;
+    position: relative;
+}
+.buttons{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    gap: 5px;
+    height: 100%;
+    padding: 11px 5px;
+    cursor: default;
+}
+.button{
+    background-color: black;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: inset 0px 0px 0px .1px black;
+}
+.button.red{
+    background-color: red;
+}
+.button.yellow{
+    background-color: yellow;
+}
+.button.green{
+    background-color: green;
+}
+
+.card-body {
+    text-align: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    margin: 15px 0px 5px;
+}
+
+.user-img {
+    width: 120px;
+    pointer-events: none;
+}
+
+.profile-info {
+    /* border: 1px solid black; */
+    font-family: var(--poppins);
+    font-weight: 500;
+}
+
+.user-name {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.user-about {
+    text-align: left;
+    margin: 8px;
+    font-size: small;
+    color: var(--para-color);
+}
+
+.grabbed {
+    cursor: grabbing;
+}
